@@ -1,0 +1,33 @@
+
+-------------------------------------------------------------------------------------------
+Q: Sorted array A[N],  and unsorted array B[M], print the elements in B, not in A.
+-------------------------------------------------------------------------------------------
+
+A1: Loop thru every element in B,  Look for match in A by traversal method
+       ===> O(M*N)
+       
+A2: Loop thru every element in B,  Look for match in A by using binary search.
+       ===> O(M*logN)   // logN has base of 2
+    ie. 
+       A:  1  2  3  4  7  9 ....
+          Compare B[i] with A[N/2] ....  
+             
+A3: Sort array B first, Look for match in A by outer sort.
+    The basic method of outer sort is merge sort
+        ===> O(M*logM)  +  log(M+N)
+            //for sorting  //find match by outer sort 
+    ie. 
+        A:  1  2  3  4  7         B: 6  3  9 -> 3  6  9  
+            |                                   |
+        ptr_a                               ptr_b 
+              
+        when (*ptr_b) <= (*ptr_a),   move ptr_b to the next (max of M moves)
+                                     not print *ptr_b, when both are equal
+        else  move ptr_a to the next (max of N moves)
+        
+Summary:
+  A1: not GOOD.  
+  A2 vs A3:  depends on M and N. 
+
+        
+        
