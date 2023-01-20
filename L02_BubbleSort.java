@@ -2,6 +2,8 @@ package basic_class_01;
 
 import java.util.Arrays;
 
+// NOT USEFUL practically 
+
 // A[N] = { 5, 2, 6, 9, 3, 11, ... }
 // first loop:
 //   Compare A[0] with A[1], if greater, do swap; then
