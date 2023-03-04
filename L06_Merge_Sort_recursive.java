@@ -4,6 +4,16 @@
 // Based on L05_Recursive_complexity.png, 
 // T(N) = 2*T(N/2) + O(N)   ====> O(N*LogN)
 
+//  arr = { 5,3,6,1,9,7}
+//  1. divided into two halves, then sort    ==> 2*T(N/2)
+//     3,5,6  |  1,7,9
+//     p1        p2
+//  2. use a helper array to merge. when p1 (or p2) reaches to the end         ====> O(N)
+//     just copy remaining in the other side (ie. 7, 9 from the right half)
+//     helper = 1,3,5,6,[7,9]
+//  3. copy helper to arr
+//     arr = 1,3,5,6,7,9
+
 public class MergeSort {
    public static void mergeSort(int[] arr) {
       if (arr==null || arr.length < 2) {
