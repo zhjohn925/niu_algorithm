@@ -25,9 +25,9 @@ public class MergeSort {
    public static void sortProcess(int[] arr, int L, int R) {
       if (L==R) return;
       int mid = L + ((R-L) >> 1);
-      sortProcess(arr, L, mid);
-      sortProcess(arr, mid+1, R);
-      merge(arr, L, mid, R);
+      sortProcess(arr, L, mid);         // T(N/2)
+      sortProcess(arr, mid+1, R);       // T(N/2)
+      merge(arr, L, mid, R);            // O(N) & Space complexity O(N) using help[]
    }
     
    public static void merge(int[] arr, int L, int mid, int R) {
