@@ -35,10 +35,12 @@ public class SmallSum {
       int [] help = new int[R-L+1];
       int i=0; 
       int p1=L;
-      int p2=mid+1;
-      while (p1<=mid && p2<=R) {
-         help[i++] = arr[p1] < arr[p2] ? arr[p1++] : arr[p2++];
-      }
+      int p2=mid+1;                                                //          |   arr = { 3, 1, 6, 2, 8, 5 }
+      int res = 0;                                                 //          |     3, 1, 6 | 2, 8, 5              
+      while (p1<=mid && p2<=R) {                                   //          |  [L]1, 3, 6 | 2, 5, 8[R]
+         res += arr[p1] < arr[p2] ? (R-p2+1)*arr[p1] : 0;          // <--------+     p1        p2        ===> (2>1): 1 * (R-p2+1)
+         help[i++] = arr[p1] < arr[p2] ? arr[p1++] : arr[p2++];    //          |        p1        p2     ===> (5>3): 1 * (R-p2+1)
+      }                                                            //          |  .....................
       while (p1<=mid) {
          help[i++] = arr[p1++];
       }
@@ -48,6 +50,7 @@ public class SmallSum {
       for (i=0; i<help.length; i++) {
          arr[L+i] = help[i];
       }
+      return res;
    }  
 }
 
