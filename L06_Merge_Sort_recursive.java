@@ -1,5 +1,5 @@
 // Time Complexity O(N*logN)
-// Space Complexity O(N)
+// Extra Space Complexity O(N)
 
 // Based on L05_Recursive_complexity.png, 
 // T(N) = 2*T(N/2) + O(N)   ====> O(N*LogN)
@@ -27,7 +27,7 @@ public class MergeSort {
       int mid = L + ((R-L) >> 1);
       sortProcess(arr, L, mid);         // T(N/2)
       sortProcess(arr, mid+1, R);       // T(N/2)
-      merge(arr, L, mid, R);            // O(N) & Space complexity O(N) using help[]
+      merge(arr, L, mid, R);            // O(N) & Extra Space complexity O(N) using help[]
    }
     
    public static void merge(int[] arr, int L, int mid, int R) {
