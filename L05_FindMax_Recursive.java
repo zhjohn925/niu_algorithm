@@ -11,7 +11,7 @@
 public class FindMax {
    public static int getMax(int[] arr, int L, int R) {
       if (L==R) return arr[L];
-      int mid = (L+R)/2;
+      int mid = L + (R-L)>>1;     // (L+R)/2 can have bug.
       int maxLeft = getMax(arr, L, mid);
       int maxRight = getMax(arr, mid+1, R);
       return Math.max(maxLeft, maxRight);
