@@ -41,7 +41,7 @@ public class QuickSort {
         cur++;
       }
     }
-    return new int[] { less + 1, more - 1};    // return "=" range.  "<" range on the left, ">" range on the right
+    return new int[] { less + 1, more - 1};    // return "=" range. 
   }
   
   public static void swap(int[] arr, int i, int j) {
