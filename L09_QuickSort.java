@@ -4,11 +4,16 @@
 // Use NetherlandsFlag to do QuickSort
 // Pick last item X to divide the array in the format of
 //           < X  ||  = X  ||  > X
-// This classic quick sort has dependency on the initial array.  ie.
-//  if an array is almost sorted,  can result time complexity O(N^2).
-//  Every partition/loop has no swap, therefore, one loop only sets one item. 
-//  { 1, 2, 3, 4, 5, 6, 7 }
-// See next random quick sort to resolve this issue. 
+//
+// This classic quick sort in best case gives time complexity O(N*LogN). 
+//    When X is picked to divide the array evenly, the number of items in left half (<X) 
+//    is equal to the number of items in the right half (>X). 
+//    T(N) = 2*T(N/2) + O(N)   ===>  O(N*logN)
+// and, in worst case if an array is almost sorted,  can result time complexity O(N^2).
+//    Every partition/loop has no swap, therefore, one loop only sets one item. 
+//    { 1, 2, 3, 4, 5, 6, 7 }  OR { 7, 6, 5, 4, 3, 2, 1 }
+// To resolve this issue, pick a random item X to divide the array. Time complexity depends on 
+// probability. (see line 33)
 
 import java.util.Arrays;
 
