@@ -4,6 +4,11 @@
 // Use NetherlandsFlag to do QuickSort
 // Pick last item X to divide the array in the format of
 //           < X  ||  = X  ||  > X
+// This classic quick sort has dependency on the initial array.  ie.
+//  if an array is almost sorted,  can result time complexity O(N^2).
+//  Every partition/loop has no swap, therefore, one loop only sets one item. 
+//  { 1, 2, 3, 4, 5, 6, 7 }
+// See next random quick sort to resolve this issue. 
 
 import java.util.Arrays;
 
