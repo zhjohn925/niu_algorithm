@@ -9,9 +9,11 @@
 //    When X is picked to divide the array evenly, the number of items in left half (<X) 
 //    is equal to the number of items in the right half (>X). 
 //    T(N) = 2*T(N/2) + O(N)   ===>  O(N*logN)
+//    extra space complexity : O(logN) to store the index of middle range. This is like binary tree. 
 // and, in worst case if an array is almost sorted,  can result time complexity O(N^2).
 //    Every partition/loop has no swap, therefore, one loop only sets one item. 
 //    { 1, 2, 3, 4, 5, 6, 7 }  OR { 7, 6, 5, 4, 3, 2, 1 }
+//    extra space complexity: O(N)
 // To resolve this issue, pick a random item X to divide the array. Time complexity depends on 
 // probability. (see line 33)
 
@@ -32,7 +34,7 @@ public class QuickSort {
       // X is used to be middle number
       swap(arr, L + (int)(Math.random() * (R-L+1)), R);
       //p is low index and high index of the middle range (=X)
-      int[] p = partition(arr, L, R);       // <== Extra Space Complexity O(logN)
+      int[] p = partition(arr, L, R);       // <== Extra Space Complexity O(logN), worst case O(N)
       quickSort(arr, L, p[0] - 1);
       quickSort(arr, p[1]+1, R);
     }
