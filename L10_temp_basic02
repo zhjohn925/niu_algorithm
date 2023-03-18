@@ -1,1 +1,13 @@
-01:09:00
+// Complete binary tree
+//   - Parent node (i) has left child node (2*i+1), and right child node (2*i+2)
+//   - A node can be Leaf node (no child), or has left child, or has left child and right child
+//   - Child node (i) has parent node (i-1)/2
+//                0
+//             /    \
+//           1       2
+//          /  \    /
+//        3     4  5
+//
+
+1:22:26
+
