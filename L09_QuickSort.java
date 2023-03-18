@@ -32,7 +32,7 @@ public class QuickSort {
       // X is used to be middle number
       swap(arr, L + (int)(Math.random() * (R-L+1)), R);
       //p is low index and high index of the middle range (=X)
-      int[] p = partition(arr, L, R);
+      int[] p = partition(arr, L, R);       // <== Extra Space Complexity O(logN)
       quickSort(arr, L, p[0] - 1);
       quickSort(arr, p[1]+1, R);
     }
