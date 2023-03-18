@@ -3,7 +3,7 @@
 
 // Use NetherlandsFlag to do QuickSort
 // Pick last item X to divide the array in the format of
-//           < X  ||  X  ||  > X
+//           < X  ||  = X  ||  > X
 
 import java.util.Arrays;
 
