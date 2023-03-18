@@ -25,6 +25,8 @@ public class QuickSort {
     }
   }
   
+  // use the last item (X, put in the middle) to divide the array
+  // "<" on the left, "=X" in the middle, ">" on the right.
   public static int[] partition(int [] arr, int L, int R) {
     int less = L - 1;
     int more = R + 1;
