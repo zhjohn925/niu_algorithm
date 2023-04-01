@@ -51,11 +51,11 @@ public class HeapSort {
     for (int i=0; i<arr.length; i++) {
       heapInsert(arr, i);   // construct max heap from 0 to i each loop
     }
-    int heapSize = arr.length;
-    swap(arr, 0, --heapSize);
-    while (heapSize > 0) {
-      heapify(arr, 0, heapSize);
-      swap(arr, 0, --heapSize);
+    int heapSize = arr.length;   // heapSize = number of nodes 
+    swap(arr, 0, --heapSize);    // decrement heapSize by 1 , swap the root (max value) to the last node
+    while (heapSize > 0) {       
+      heapify(arr, 0, heapSize); // heapify node 0 to heapSize-1, that makes root has max value again 
+      swap(arr, 0, --heapSize);  // decrement heapSize by 1, swap the root (max value) to the last node 
     }
   }
  
