@@ -2,11 +2,20 @@
 // TO DO:
 //    How to build Queue data structure by using Stack
 //    data = { 1, 2, 3, 4, 5}
-//    Data Stack                   Helper Stack
-
-
-
-
+//              Data Stack                   Helper Stack
+//    push         5
+//                 4
+//                 3 
+//                 2
+//                 1
+//    pop (has to pop all), and push to Helper
+//                                               1
+//                                               2
+//                                               3
+//                                               4
+//                                               5
+//    then pop from Helper Stack
+//
 
 public static class ArrayStack {
   private Integer[] arr;
