@@ -26,6 +26,7 @@ public static class ArrayStack {
       throw new IllegalArgumentException("The init size is less than 0");
     }
     arr = new Integer[initSize];
+    index = 0;
     size = 0;
   }
   
@@ -39,12 +40,14 @@ public static class ArrayStack {
       throw new ArrayIndexOutOfBoundsException("The queue is full");
     }
     arr[index++] = obj;
+    size++;
   }
   
   public Integer pop() {
     if (index == 0) {
       throw new ArrayIndexOutOfBoundsException("The queue is empty");
     }
+    size--;
     return arr[--index];
   }  
 }
