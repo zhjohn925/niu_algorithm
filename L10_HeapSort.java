@@ -42,7 +42,7 @@
 //            /   \    /                      /   \    /                                  /   \   / 
 //           3     5  2                      3     5  2                                  3     5 2   
 
-// java provides PriorityQueue to implement heap. 
+// java provides PriorityQueue and TreeSet to implement heap. 
 
 import java.util.Arrays;
 
