@@ -26,7 +26,7 @@ public class TankSort4MaxGap {
     }
     int res = 0;
     int lastMax = maxs[0];
-    
+    int i = 1;
     for (; i<=len; i++) {
       if (hasNum[i]) {
         res = Math.max(res, mins[i] - lastMax);
