@@ -1,3 +1,13 @@
+// Stack :  LIFO
+// TO DO:
+//    How to build Queue data structure by using Stack
+//    data = { 1, 2, 3, 4, 5}
+//    Data Stack                   Helper Stack
+
+
+
+
+
 public static class ArrayStack {
   private Integer[] arr;
   private Integer index;
