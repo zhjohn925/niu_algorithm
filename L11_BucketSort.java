@@ -1,4 +1,4 @@
-public class TankSort4MaxGap {
+public class BucketSort4MaxGap {
   public static int maxGap(int[] nums) {
     if (nums == null || nums.length < 2) {
       return 0;
