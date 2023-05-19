@@ -8,10 +8,12 @@ def heapify(arr, n, i):
     right = 2 * i + 2  # index of the right child
 
     # Check if the left child is larger than the root
+    # left < n : make sure the left child in the tree
     if left < n and arr[left] > arr[largest]:
         largest = left
 
     # Check if the right child is larger than the current largest
+    # right < n : make sure the right child in the tree
     if right < n and arr[right] > arr[largest]:
         largest = right
 
