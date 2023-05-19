@@ -1,0 +1,40 @@
+Heap sort is a comparison-based sorting algorithm that operates on binary heaps. 
+It works by transforming the input array into a binary heap data structure, which has 
+the property that the maximum (or minimum, depending on the sorting order) element is 
+always at the root.
+
+Here is a step-by-step explanation of the Heap Sort algorithm:
+
+1. Build the Heap: 
+   The first step is to build a max heap from the input array. 
+   This is done by starting from the first non-leaf node (index n/2 - 1) and moving upwards to 
+   the root of the heap. 
+   For each node, we ensure that the subtree rooted at that node follows the heap property, 
+   where the value of a parent node is greater than or equal to its child nodes. 
+   This process rearranges the elements in the array to form a max heap.
+
+2. Swap and Heapify: 
+   Once we have built the max heap, the largest element (root) will be at the 
+   top of the heap. We swap it with the last element in the array to move it to its correct 
+   sorted position. 
+   After the swap, we reduce the heap size by 1 and perform the heapify operation on the new root node 
+   to restore the heap property. This process is repeated until all elements are sorted.
+
+3. Heapify Operation: 
+   The heapify operation is used to maintain the heap property. 
+   Given a node at index i, we compare its value with its left child (2i+1) and 
+   right child (2i+2) to find the largest among the three. 
+   If the largest is not the current node, we swap the node with the largest child and 
+   recursively perform the heapify operation on the affected child node.
+
+4. Repeat Step 2 and Step 3: 
+   Steps 2 and 3 are repeated until the heap size is reduced to 1. 
+   At this point, the array is sorted in ascending order.
+
+The time complexity of Heap Sort is O(n log n), where n is the number of elements in the input array. 
+This makes it an efficient sorting algorithm, especially for large datasets. 
+However, it has a disadvantage of not being stable, meaning that elements with equal values may change 
+their relative order after sorting.
+
+Heap sort is often preferred in scenarios where a stable sort is not required, and the focus is 
+on sorting efficiency.
