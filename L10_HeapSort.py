@@ -31,8 +31,11 @@ def heap_sort(arr):
     """
     n = len(arr)
 
-    # Build a max heap by repeatedly heapifying each subtree
-    # Starting from the last non-leaf node up to the root
+    # - Build a max heap by repeatedly heapifying each subtree, starting from the last non-leaf node up to the root.
+    # - To determine the index of the last non-leaf node in a binary heap represented as an array, 
+    #   you can use the formula (n // 2) - 1, where n is the total number of elements in the heap.
+    # - A non-leaf node is a node that has at least one child. A leaf node, on the other hand, is a node that 
+    #   does not have any children.
     for i in range(n // 2 - 1, -1, -1):
         heapify(arr, n, i)
 
@@ -44,7 +47,7 @@ def heap_sort(arr):
         # Heapify the reduced heap (excluding the sorted elements)
         heapify(arr, i, 0)
 
-
+        
 # Example usage
 arr = [12, 11, 13, 5, 6, 7]
 heap_sort(arr)
