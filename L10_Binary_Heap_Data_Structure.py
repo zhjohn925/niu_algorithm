@@ -36,25 +36,32 @@ based on their priority.
 
 class BinaryHeap:
     def __init__(self):
+        # Initialize an empty heap
         self.heap = []
 
     def parent(self, index):
+        # Calculate the parent index of a given index
         return (index - 1) // 2
 
     def left_child(self, index):
+        # Calculate the left child index of a given index
         return (2 * index) + 1
 
     def right_child(self, index):
+        # Calculate the right child index of a given index
         return (2 * index) + 2
 
     def swap(self, i, j):
+        # Swap the elements at indices i and j in the heap
         self.heap[i], self.heap[j] = self.heap[j], self.heap[i]
 
     def insert(self, value):
+        # Insert a new value into the heap
         self.heap.append(value)
         self.heapify_up(len(self.heap) - 1)
 
     def delete(self):
+        # Remove and return the root element from the heap
         if not self.is_empty():
             self.swap(0, len(self.heap) - 1)
             deleted_value = self.heap.pop()
@@ -62,11 +69,13 @@ class BinaryHeap:
             return deleted_value
 
     def heapify_up(self, index):
+        # Restore the heap property by bubbling up the element at the given index
         while index > 0 and self.heap[index] > self.heap[self.parent(index)]:
             self.swap(index, self.parent(index))
             index = self.parent(index)
 
     def heapify_down(self, index):
+        # Restore the heap property by bubbling down the element at the given index
         largest = index
         left = self.left_child(index)
         right = self.right_child(index)
@@ -82,10 +91,13 @@ class BinaryHeap:
             self.heapify_down(largest)
 
     def is_empty(self):
+        # Check if the heap is empty
         return len(self.heap) == 0
 
     def print_heap(self):
+        # Print the current state of the heap
         print(self.heap)
+
    
 # Test   
 heap = BinaryHeap()
