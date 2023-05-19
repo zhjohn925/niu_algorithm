@@ -86,3 +86,18 @@ class BinaryHeap:
 
     def print_heap(self):
         print(self.heap)
+   
+# Test   
+heap = BinaryHeap()
+heap.insert(5)
+heap.insert(10)
+heap.insert(3)
+heap.insert(8)
+heap.insert(1)
+
+heap.print_heap()  # Output: [10, 8, 3, 5, 1]
+
+value = heap.delete()
+print(value)  # Output: 10
+
+heap.print_heap()  # Output: [8, 5, 3, 1]
