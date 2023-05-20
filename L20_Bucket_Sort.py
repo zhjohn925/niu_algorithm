@@ -1,3 +1,9 @@
+# Bucket Sort is a linear-time sorting algorithm on average when the input elements are uniformly 
+# distributed across the range. 
+# It is commonly used when the input is uniformly distributed over a range or when the range of values 
+# is relatively small compared to the input size.
+
+
 def bucket_sort(arr):
     # Create an empty list of buckets
     buckets = []
