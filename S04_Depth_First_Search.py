@@ -26,20 +26,20 @@ def dfs1(graph, start, visited=None):
 
 # 'start' is the starting node in 'graph' for the DFS traversal.
 # The algorithm uses a stack to keep track of nodes to visit. It pops the top node from the stack, 
-# checks if it has been visited, processes it, and adds its unvisited neighboring nodes to the stack. 
+# checks if it has been visited, processes it, and adds its unvisited neighboring nodes to the stack (LIFO). 
 # This process continues until the stack becomes empty.
 def dfs2(graph, start):
     visited = set()  # Set to keep track of visited nodes
     stack = [start]  # Stack to store nodes for traversal
 
     while stack:
-        node = stack.pop()  # Pop the top node from the stack
+        node = stack.pop()  # Pop the top node from the stack (LIFO)
 
         if node not in visited:
             visited.add(node)
             print(node)  # Process the node
 
-            # Push unvisited neighboring nodes onto the stack
+            # Push unvisited neighboring nodes onto the stack (LIFO)
             stack.extend(neighbor for neighbor in graph[node] if neighbor not in visited)
 
 # Example usage:
