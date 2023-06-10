@@ -2,6 +2,17 @@
 # Each element dp[i][j] in the table represents the length of the longest common subsequence for the 
 # substrings s1[0:i] and s2[0:j].
 
+# The Longest Common Subsequence (LCS) is a problem in computer science that involves finding the longest 
+# subsequence that is common to two or more given sequences. A subsequence is a sequence that can be derived 
+# by deleting some or no elements from the original sequence while maintaining the relative order of the 
+# remaining elements.
+
+# For example, consider two sequences: "ABCD" and "ACDF". The common subsequences between these two sequences 
+# are "AD" and "ACD". Among these common subsequences, "ACD" is the longest subsequence with a length of 3.
+
+# The LCS problem is different from the Longest Common Substring problem, which requires the subsequence to 
+# be contiguous (i.e., consecutive elements) in both sequences.
+
 def longest_common_subsequence(s1, s2):
     m = len(s1)  # Length of string s1
     n = len(s2)  # Length of string s2
