@@ -1,3 +1,7 @@
+# We create a 2D table dp of size (m+1) x (n+1), where m is the length of s1 and n is the length of s2. 
+# Each element dp[i][j] in the table represents the length of the longest common subsequence for the 
+# substrings s1[0:i] and s2[0:j].
+
 def longest_common_subsequence(s1, s2):
     m = len(s1)  # Length of string s1
     n = len(s2)  # Length of string s2
