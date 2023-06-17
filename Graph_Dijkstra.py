@@ -7,6 +7,8 @@ def dijkstra(graph, start):
     # Set the distance to the start node as 0
     distances[start] = 0
     # Priority queue to store nodes with their corresponding distances
+    # In a priority queue, elements are inserted with an associated priority value, and 
+    # the element with the highest priority is always dequeued first. 
     priority_queue = [(0, start)]
 
     while priority_queue:
@@ -41,3 +43,10 @@ distances = dijkstra(graph, start_node)
 print("Shortest distances from the start node:")
 for node, distance in distances.items():
     print(f"Node: {node}, Distance: {distance}")
+    
+# Output:
+# Shortest distances from the start node:
+# Node: A, Distance: 0
+# Node: B, Distance: 3
+# Node: C, Distance: 2
+# Node: D, Distance: 6
