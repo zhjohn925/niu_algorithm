@@ -1,6 +1,9 @@
 import sys
 import heapq
 
+# Dijkstra's algorithm, which has a time complexity of O((V + E) * log(V)) using a suitable data structure like a min-heap.
+# where V is the number of vertices and E is the number of edges in the graph.
+
 def dijkstra(graph, start):
     # Initialize distances to all nodes as infinity
     distances = {node: sys.maxsize for node in graph}
